@@ -1,0 +1,24 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+
+#container{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 50px;
+	margin-top: 60px;
+	background-color: #343a40;
+}
+
+
+
