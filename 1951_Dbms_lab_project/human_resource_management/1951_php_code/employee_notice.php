@@ -8,10 +8,6 @@ include("config.php");
         <div class="row">
             <div class="col-md-12">
               <div class="card strpied-tabled-with-hover">
-                  <div class="card-header ">
-                    <h4 class="card-title"><a href="add_notice.php">Add Notice</a> </h4>
-                  </div>
-
   </form>
   <table class="table table-hover table-striped">
   <thead>

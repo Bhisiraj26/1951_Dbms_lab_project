@@ -29,7 +29,20 @@
         </div>
     </div>
     
-  
+     <?php include 'jsconnect.php' ?>
+      <!-- jQuery -->
+      <script type="text/javascript">  
+          $(function() {
+            var interval = setInterval(function() {
+              var momentNow = moment();
+              $('#date').html(momentNow.format('dddd').substring(0,9).toUpperCase() + ' - ' + momentNow.format('MMMM DD, YYYY'));  
+              $('#time').html(momentNow.format('hh:mm:ss A'));
+            }, 100);
+    
+          });
+      </script>
+      
+      <!-- Your custom scripts (optional) -->
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>

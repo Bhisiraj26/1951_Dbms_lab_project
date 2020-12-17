@@ -67,7 +67,7 @@ include("config.php");
                     </a>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="dashboard.php">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
@@ -110,9 +110,21 @@ include("config.php");
                         </a>
                     </li>
                     <li>
+                        <a class="nav-link" href="./payroll.php">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Payroll</p>
+                        </a>
+                    </li>
+                    <li>
                         <a class="nav-link" href="./view_notice.php">
-                            <i class="nc-icon nc-chart-pie-35"></i>
+                          <i class="nc-icon nc-atom"></i>
                             <p>Notice</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./view_attendance.php">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Attendance</p>
                         </a>
                     </li>
                 </ul>
@@ -128,6 +140,7 @@ include("config.php");
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
                     </button>
+                     <div class="container-fluid"><center><a class="navbar-brand" id="date" href="#pablo" style="font-weight: bold;font-size: 100%;"></a></center></div>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
                             <?php
@@ -151,6 +164,7 @@ include("config.php");
                                 ?>
                             
                         </ul>
+                         <a class="navbar-brand" id="time" style="font-weight: bold;font-size: 100%;font-family:'digital-clock-font';" href="#pablo"></a>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="ti-user" href='admin_profile.php?<?php echo "A_id=$Admin_id" ?>'><?php echo" $F_name"; ?>  

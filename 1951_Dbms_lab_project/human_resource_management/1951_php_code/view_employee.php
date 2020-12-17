@@ -17,6 +17,9 @@ include("header.php");
                                         <input type="text" name="Department" placeholder="Department" required>
                                         <button type="submit" name="search_by_dname" class="btn btn-primary">Search</button>
                                     </div>
+                                      <div class="card-header ">
+                    <h6 class="card-title"><a href="deductions_details.php">Display Salary Deductions details</a> </h6>
+                  </div>
                                 
                                 <?php
                                 include('config.php');
@@ -27,10 +30,7 @@ include("header.php");
                                     $result = $link->query($sql);
 
                                     
-                                            
-                                      
-                                
-                               
+                              
                                 ?>
                                 </form>
                                     <table class="table table-hover table-striped">
@@ -44,6 +44,7 @@ include("header.php");
                                             <th>Gender</th>
                                             <th>Department</th>
                                             <th>Designation</th>
+                                            <th>Account</th>
                                         </thead>
                                         <tbody>
                                         <?php
@@ -62,6 +63,7 @@ include("header.php");
                                                 <td><?php echo $row['Gender']; ?></td>
                                                 <td><?php echo $row['Department']; ?></td>
                                                 <td><?php echo $row['Designation']; ?></td>
+                                                <td><a class="btn btn-primary" href="employee_update_ac.php?Employee_id=<?php echo $row['Employee_id']; ?>">Edit</a></td>
                                             </tr>
                                             <?php
                                                 }

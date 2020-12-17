@@ -28,7 +28,7 @@
     </center><br>
     <div class="login-f1">
    <!--  <a style="text-decoration: none; color: #187FAB;" data-toggle="tooltip" title="Create Account!" href="register.php">Don't Have An Account?</a><br> -->
-    <a style="text-decoration: none; color: #187FAB;" data-toggle="tooltip" title="Signin" href="admin_forgot_password.php">Forgot Password?</a><br>
+    <a style="text-decoration: none; color: #187FAB;" data-toggle="tooltip" title="Signin" href="employee_forgot_password.php">Forgot Password?</a><br>
      <a style="text-decoration: none; color: #187FAB;" data-toggle="tooltip" title="Signin" href="index.php"> Go back?</a><br>
   </div>
     </div>

@@ -4,9 +4,11 @@ include("header1.php");
 
 <?php
 include("config.php");
-$sql = "SELECT * FROM department";
+$sql = "SELECT * FROM leave_type";
 $result = $link->query($sql);
 ?>
+
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -29,16 +31,25 @@ $result = $link->query($sql);
 
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
-                                                    <label style="color: black">Department</label>
-                                                    <select class="form-control" name="Dname" id="Dname" type="text">
+                                                    <label style="color: black">Leave Type</label>
+                                                    <select class="form-control" name="Leave_type" id="Leave_type" type="text">
                                                     <option value="">Select</option>
                                                     <?php 
                                                      if ($result->num_rows > 0) {
                                                      while($row = $result->fetch_assoc()) {
                                                     ?>
-                                                    <option value="<?php echo $row['Dname']; ?>"><?php echo $row['Dname']; ?></option>
+                                                    <option value="<?php echo $row['Leave_type']; ?>"><?php echo $row['Leave_type']; ?></option>
                                                     <?php } } ?>
                                                     </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 pr-1">
+                                                <div class="form-group">
+                                                    <label style="color: black">Department</label>
+                                                    <input id="Dname" type="text" disabled class="form-control" placeholder="Department Name" name="Dname" required="required" value="<?php echo $Department; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -91,6 +102,7 @@ $result = $link->query($sql);
                   $('.btn-primary').click(function(){
                     var Employee_id = $('#Employee_id').val();
                     var Employee_name = $('#Employee_name').val();
+                    var Leave_type = $('#Leave_type').val();
                     var Dname = $('#Dname').val();
                     var Leave_from = $('#Leave_from').val();
                     var Leave_to = $('#Leave_to').val();
@@ -100,7 +112,9 @@ $result = $link->query($sql);
                    if(Employee_id != '')
                    {
                     if(Employee_name != '')
-                    {                         
+                    {  
+                     if(Leave_type != '')
+                    {                        
                      if(Dname != '')
                         {                                      
                         if(Leave_from != '')
@@ -114,8 +128,7 @@ $result = $link->query($sql);
                                 {
                                     type: "POST",
                                     url: url,
-                                    data: { Employee_id: Employee_id, Employee_name: Employee_name, 
-                                        Dname : Dname,Leave_from : Leave_from, Leave_to : Leave_to, Description: Description },
+                                    data: { Employee_id: Employee_id, Employee_name: Employee_name, Leave_type: Leave_type, Dname : Dname,Leave_from : Leave_from, Leave_to : Leave_to, Description: Description },
                                     success: function(data)
                                     {
                                         if(data == 1)
@@ -149,6 +162,12 @@ $result = $link->query($sql);
                     else
                     {
                         $('#success').html('Department Name Cannot Be Empty');
+                    }
+
+                     }
+                    else
+                    {
+                        $('#success').html('Leave Type Cannot Be Empty');
                     }
 
                     }

@@ -64,6 +64,18 @@ include("config.php");
                             <p>View Notice</p>
                         </a>
                     </li>
+                     <li>
+                        <a class="nav-link" href="./payroll1.php">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>Net Pay</p>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a class="nav-link" href="./attend.php">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>Attendence</p>
+                        </a>
+                    </li> -->
                     <!-- <li>
                         <a class="nav-link" href="./view_employee.php">
                             <i class="nc-icon nc-notes"></i>
@@ -79,11 +91,13 @@ include("config.php");
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#pablo"> Employee Dashboard </a>
+
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
                     </button>
+                     <div class="container-fluid"><center><a class="navbar-brand" id="date" href="#pablo" style="font-weight: bold;font-size: 100%;"></a></center></div>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
                             <?php
@@ -104,13 +118,19 @@ include("config.php");
                                 $Email = $row['Email'];
                                 $Salary = $row['Salary'];
                                 $Password = $row['Password'];
+                                $Deduction = $row['Deduction'];
+                                $Advance = $row['Advance'];
+                                $Overtime = $row['Overtime'];
+                                $Bonus = $row['Bonus'];
                                 $Employee_image = $row['Employee_image'];
                                 $Employee_cover = $row['Employee_cover'];
                                 ?>
                         </ul>
+                        <a class="navbar-brand" id="time" style="font-weight: bold;font-size: 100%;font-family:'digital-clock-font';" href="#pablo"></a>
+                      
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="ti-user" href='admin_profile.php?<?php echo "E_id=$Employee_id" ?>'><?php echo" $F_name"; ?>  
+                                <a class="ti-user" href='employee_profile.php?<?php echo "E_id=$Employee_id" ?>'><?php echo" $F_name"; ?>  
                                 </a>
                             </li>
                                     <?php

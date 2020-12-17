@@ -55,7 +55,7 @@ if(isset($_GET['updat_id']))
             <div class="col-md-12">
               <div class="card strpied-tabled-with-hover">
                   <div class="card-header ">
-                    <h4 class="card-title"><a href="add_leave.php">Add Leave</a> </h4>
+                    <h4 class="card-title"><a href="add_leave.php">Approve Or Reject Leave</a> </h4>
                      <?php if(isset($Success)) echo $Success; ?> 
                      <?php if(isset($Success1)) echo $Success1; ?>
                   </div>
@@ -100,6 +100,7 @@ if(isset($_GET['updat_id']))
                                         <thead>
                                             <th>ID</th>
                                             <th>Employee Name</th>
+                                            <th>Leave Type</th>
                                             <th>Department</th>
                                             <th>Leave From</th>
                                             <th>Leave To</th>
@@ -119,6 +120,7 @@ if(isset($_GET['updat_id']))
               echo '<tr>
                 <td>'.$row["Leave_id"].'</td>
                 <td>'.$row["Employee_name"].'</td>
+                <td>'.$row["Leave_type"].'</td>
                 <td>'.$row["Dname"].'</td>
                 <td>'.$row["Leave_from"].'</td>
                 <td>'.$row["Leave_to"].'</td>

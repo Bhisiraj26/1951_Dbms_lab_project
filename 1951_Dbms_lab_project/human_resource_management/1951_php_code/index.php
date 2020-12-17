@@ -85,6 +85,9 @@ include("config.php");
                             </li>
                         </ul>
                     </div>
+                     <div class="container-fluid"><center><a class="navbar-brand" id="date" href="#pablo" style="font-weight: bold;font-size: 100%;"></a></center></div>
+
+                     <a class="navbar-brand" id="time" style="font-weight: bold;font-size: 100%;font-family:'digital-clock-font';" href="#pablo"></a>
                 </div>
             </nav>
             <!-- End Navbar -->
@@ -105,9 +108,6 @@ include("config.php");
                                         <i class="fa fa-circle text-warning"></i> Unsubscribe
                                     </div>
                                     <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +213,20 @@ include("config.php");
             </footer>
         </div>
     </div>
+
+     <?php include 'jsconnect.php' ?>
+      <!-- jQuery -->
+      <script type="text/javascript">  
+          $(function() {
+            var interval = setInterval(function() {
+              var momentNow = moment();
+              $('#date').html(momentNow.format('dddd').substring(0,9).toUpperCase() + ' - ' + momentNow.format('MMMM DD, YYYY'));  
+              $('#time').html(momentNow.format('hh:mm:ss A'));
+            }, 100);
+    
+          });
+      </script>
+      
   
 </body>
 <!--   Core JS Files   -->

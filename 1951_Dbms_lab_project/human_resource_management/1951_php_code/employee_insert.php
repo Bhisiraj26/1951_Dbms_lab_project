@@ -66,7 +66,7 @@ if(isset($_POST['Password']) && !empty($_POST['Password']))
         $profile_pic = "head_turqoise.jpg";
                               
 
-$sql = "INSERT into employee(F_name,L_name,Address,Contact_no,Age,Gender,Department,Designation,Email,Salary, Password,Employee_image,Employee_cover) VALUES ('".$F_name."','".$L_name."','".$Address."','".$Contact_no."','".$Age."','".$Gender."','".$Department."','".$Designation."','".$Email."','".$Salary."','".$Password."','".$profile_pic."','default_cover.jpg')"; 
+$sql = "INSERT into employee(F_name,L_name,Address,Contact_no,Age,Gender,Department,Designation,Email,Salary, Password,Deduction,Advance,Overtime,Bonus,Employee_image,Employee_cover) VALUES ('".$F_name."','".$L_name."','".$Address."','".$Contact_no."','".$Age."','".$Gender."','".$Department."','".$Designation."','".$Email."','".$Salary."','".$Password."',0,0,0,0,'".$profile_pic."','default_cover.jpg')"; 
 
     if($link->query($sql) == TRUE)
     { 
