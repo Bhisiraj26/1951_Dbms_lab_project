@@ -27,7 +27,7 @@ include("config.php");
                                             </div></center>
                                     <div class="card-body">
                                         <p class="card-text">'.$row["Content"].'</p>
-                            <a href="view_notice.php" class="btn btn-primary">Back</a>
+                            <a href="employee_notice.php" class="btn btn-primary">Back</a>
                             </div>
                             </div>';
                                 }

@@ -112,7 +112,7 @@ if ($result->num_rows > 0) {
 
                                        
                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <center><input type="button" name="sign_up" id="sign_up" class="btn btn-primary" value="Signup" style="background-color: lightblue;" style="color: white;">
+                                        <center><input type="button" name="sign_up" id="sign_up" class="btn btn-primary" value="Submit" style="background-color: lightblue;" style="color: white;">
                                         </center>
                                         <div class="clearfix"></div>
                                     </form>
